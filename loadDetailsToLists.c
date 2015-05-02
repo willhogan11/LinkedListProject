@@ -15,32 +15,32 @@ void loadFileToLinkedList(NEWEMP *head, char buffer[])
         fgets(buffer, MAXCOUNT, fptr);
 		fflush(stdin);
 		sscanf(buffer, "%d %s %s %s %s %d %d %d %f %s\n", 
-									&temp->id,
-									temp->FName, 
-									temp->LName,
-									temp->empAddr,
-									temp->department,
-									&temp->dateOfJoining.day, 
-									&temp->dateOfJoining.month, 
-									&temp->dateOfJoining.year, 
-									&temp->annualSalary,
-									temp->email); 
-									fflush(stdin);
+							&temp->id,
+							temp->FName, 
+							temp->LName,
+							temp->empAddr,
+							temp->department,
+							&temp->dateOfJoining.day, 
+							&temp->dateOfJoining.month, 
+							&temp->dateOfJoining.year, 
+							&temp->annualSalary,
+							temp->email); 
+							fflush(stdin);
 
 		// Uncomment the DEBUG Definition in the Header file to Exit DEBUG mode that shows that the Contents 
 		// were successfully read into the LinkedList from the Employee TextFile
 		#ifndef DEBUG
 		printf("%d %s %s %s %s %d %d %d %5.2f %s\n", 
-									temp->id,
-									temp->FName, 
-									temp->LName, 
-									temp->empAddr,
-									temp->department,
-									temp->dateOfJoining.day,
-									temp->dateOfJoining.month,
-									temp->dateOfJoining.year,
-									temp->annualSalary, 
-									temp->email);
+							temp->id,
+							temp->FName, 
+							temp->LName, 
+							temp->empAddr,
+							temp->department,
+							temp->dateOfJoining.day,
+							temp->dateOfJoining.month,
+							temp->dateOfJoining.year,
+							temp->annualSalary, 
+							temp->email);
 		#endif
 
         temp->next = (NEWEMP*)malloc(sizeof(NEWEMP));
