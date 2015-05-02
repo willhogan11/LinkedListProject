@@ -13,16 +13,16 @@ main(void)
 	int userOptions;
 	char strBuffer[MAXCOUNT + 1];
 	FILE *fptr = fopen(FILENAME, READMODE);
-    NEWEMP *head, *temp;
+    	NEWEMP *head, *temp;
 	LOGIN *headLogin, *tempLogin;
 	headLogin = (LOGIN*)malloc(sizeof(LOGIN));
 	tempLogin = (LOGIN*)malloc(sizeof(LOGIN));tempLogin = (LOGIN*)malloc(sizeof(LOGIN));
-    temp = (NEWEMP*)malloc(sizeof(NEWEMP));
+	temp = (NEWEMP*)malloc(sizeof(NEWEMP));
 	head = (NEWEMP*)malloc(sizeof(NEWEMP));
 	tempLogin->next = NULL;
 	headLogin = tempLogin;
-    temp->next = NULL;
-    head = temp;
+    	temp->next = NULL;
+	head = temp;
 
 	// Launch Login Function and Load User Credentials into LinkedList from Textfile
 	loginFunction(headLogin, strBuffer);
